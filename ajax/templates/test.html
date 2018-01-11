@@ -1,0 +1,35 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang='uk'>
+  <head>
+  	<meta charset='UTF-8'/>
+    <title></title>
+  	<meta name='description'
+      value=/>
+      <!-- Include Styles -->
+      <link rel='stylesheet' href='https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css'>
+      <link rel="stylesheet" href='{% static "main.css" %}'>
+  </head>
+  <body class="body">
+
+    <div class="one">
+    {% csrf_token %}
+      <td class="day-box">
+        <input type="checkbox" data-present_day1="yes"
+               data-name="nowe" checked='checked'/>
+      </td>
+    </div>
+
+  </body>
+
+
+  	<!-- Javascripts Section -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
+  	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js'></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  	<script src='https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js'></script>
+    <script src=''></script>
+  </body>
+</html>
