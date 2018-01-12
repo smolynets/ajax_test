@@ -13,13 +13,32 @@
   </head>
   <body class="body">
 
-    <div class="one">
+    <!--<div class="one">
     {% csrf_token %}
       <td class="day-box">
         <input type="checkbox" data-present_day1="yes"
                data-name="nowe" checked='checked'/>
       </td>
-    </div>
+    </div>-->
+    {% for ts in test %}
+    <div class="one">
+                    <form id="form_buying_product" class="form-inline" action="{% url 'adding' %}">{% csrf_token %}
+                        <div class="form-group">
+                             <input type="number" class="form-control" name="number" id="number">
+                        </div>
+
+
+                            <div class="form-group">
+                                <button type="submit" id="submit_btn" class="btn btn-success btn-buy"
+                                    data-name ="{{ ts.name }}"
+                                >
+                                </button>
+                                {{ ts.name }}
+                            </div>
+
+                    </form>
+                </div>
+    {% endfor %}            
 
   </body>
 
@@ -30,6 +49,6 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
   	<script src='https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js'></script>
-    <script src=''></script>
+    <script src='{% static 'script.js' %}'></script>
   </body>
 </html>
