@@ -12,15 +12,17 @@
       <link rel="stylesheet" href='{% static "main.css" %}'>
   </head>
   <body class="body">
-
-    <!--<div class="one">
-    {% csrf_token %}
-      <td class="day-box">
-        <input type="checkbox" data-present_day1="yes"
-               data-name="nowe" checked='checked'/>
-      </td>
-    </div>-->
     {% for ts in test %}
+    <div class="one">
+    {% csrf_token %}
+      <td>
+        <input type="submit" value={{ ts.name }} name="add_button"
+    class="btn btn-primary day-box" data-name={{ ts.name }} data-url="{% url 'adding' %}"/>
+      </td>
+    </div>
+    {% endfor %}
+
+    <!--{% for ts in test %}
     <div class="one">
                     <form id="form_buying_product" class="form-inline" action="{% url 'adding' %}">{% csrf_token %}
                         <div class="form-group">
@@ -38,7 +40,7 @@
 
                     </form>
                 </div>
-    {% endfor %}            
+    {% endfor %}-->            
 
   </body>
 
