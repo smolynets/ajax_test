@@ -11,6 +11,7 @@ function initJournal() {
       },
     
     });
+    location.reload(true);
     });
 }
 

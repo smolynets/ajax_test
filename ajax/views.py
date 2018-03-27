@@ -6,6 +6,7 @@ from .models import *
 
 def test(request):
     test = Test.objects.all()
+    TestinCart = testinCart.objects.all()
     session_key = request.session.session_key 
     return render(request, 'test.html', locals())
 

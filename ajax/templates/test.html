@@ -12,6 +12,11 @@
       <link rel="stylesheet" href='{% static "main.css" %}'>
   </head>
   <body class="body">
+  <ul>
+  	{% for t in TestinCart %}
+  	<li>{{ t.name }}</li>
+  	{% endfor %}
+  </ul>
     {% for ts in test %}
     <div class="one">
     {% csrf_token %}
