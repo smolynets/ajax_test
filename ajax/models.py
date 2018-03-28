@@ -15,6 +15,7 @@ class Test(models.Model):
 
 class testinCart(models.Model):
 	name = models.CharField(max_length=256, blank=False)
+	session_key = models.CharField(max_length=128, blank=True, null=True, default=None)
 
 	class Meta(object):
 		verbose_name = u'Кошик'
