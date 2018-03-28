@@ -2,3 +2,12 @@
 	margin-left: 50px;
 	margin-top: 300px;
 }
+
+.menu-container{
+	position: relative;
+}
+
+.basket-items{
+	position: absolute;
+	background-color: yellow;
+}
