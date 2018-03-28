@@ -22,7 +22,10 @@
     {% csrf_token %}
       <td>
         <input type="submit" value={{ ts.name }} name="add_button"
-    class="btn btn-primary day-box" data-name={{ ts.name }} data-url="{% url 'adding' %}"/>
+    class="btn btn-primary day-box" 
+    data-name={{ ts.name }}
+    data-cnt='1' 
+    data-url="{% url 'adding' %}"/>
       </td>
     </div>
     {% endfor %}

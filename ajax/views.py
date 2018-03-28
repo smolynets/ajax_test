@@ -10,7 +10,6 @@ def test(request):
     if not session_key:
     	request.session.cycle_key() 
     TestinCart = testinCart.objects.filter(session_key=session_key)
-    print session_key
     return render(request, 'test.html', locals())
 
 
@@ -21,7 +20,8 @@ def adding(request):
     if not session_key:
     	request.session.cycle_key() 	
     fl = request.POST.get('name', '').strip()
-    print (fl)
+    cnt = request.POST.get('cnt', '').strip()
+    print cnt
     data = {}
     data['name'] = fl
     data['session_key'] = session_key

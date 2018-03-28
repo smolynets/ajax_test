@@ -7,10 +7,13 @@ function initJournal() {
       'dataType': 'json',
       'data': {
         'name': box.data('name'),
+        'cnt': box.data('cnt'),
         'csrfmiddlewaretoken': $('input[name="csrfmiddlewaretoken"]').val()
       },
     
     });
+    var t = box.data('cnt');
+    console.log(t);
     location.reload(true);
     });
 }
